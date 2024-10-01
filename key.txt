@@ -1,0 +1,36 @@
+als ik weer een key nodig heb op mijn laptop moet ik deze stappen even doen.
+
+git@github.com: Permission denied (publickey). fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.
+1 positieve beoordeling
+Suryatapa · College 217
+· 1 maand geleden
+
+This is just the answer i am sharing with you all,
+$ git push -u origin main
+
+If error:-
+
+git@github.com: Permission denied (publickey).
+
+fatal: Could not read from remote repository.
+
+
+Please make sure you have the correct access rights
+
+and the repository exists.
+
+then to minimize the error:
+
+$ ssh-keygen
+
+then keep pressing enter and after this:
+
+The key fingerprint is:
+
+SHA256:MkxMKAKfr32FbyTXSiJGZxd8m37TfAL8QR0FGzXvwqUk user@username
+
+then go to GitHub, go to settings, go to SSH and GPG keys, Tap on New SSH key, then copy and paste the key fingerprint that is generated just now or go to C:\Users\<Your user name>\.ssh to see the key,
+
+Add suitable Title and Key type as per your choice and tap on ADD SSH key. After Successful completion now continue with Angela i.e.:
+
+$ git push -u origin main
